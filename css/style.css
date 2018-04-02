@@ -1,0 +1,136 @@
+body {
+    /*font: 15px/1.5 Arial, Helvetica, sans-serif   --- same*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height:1.5;
+    padding: 0;
+    margin:0px;
+    background-color:rgb(199, 199, 199);
+}
+
+/*global*/
+.conteiner{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#branding{
+    margin-left:20px;
+    margin-top:5px;
+}
+
+ul{ 
+    margin:0;
+    padding:0;
+}
+
+header {
+    background: linear-gradient(rgb(236, 233, 233), rgb(243, 243, 243));
+    opacity: .8;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    min-height: 70px;
+    border-bottom: black 1px double;
+}
+
+header a{
+    color:rgb(22, 17, 17);
+    text-decoration: none;/*removing underline on links*/
+    font-size:22px;
+    margin-right: 20px;
+}
+
+
+header li{
+    padding-right:10px;
+    display: inline;
+    padding:0 20 0 20; /*top right  bottom left*/
+}
+
+header #branding{
+    float:left;
+    }
+header #branding h1 {
+    margin:0;
+}
+
+header nav {
+    float:right;
+    margin-top:15px;
+}
+
+
+header .highlight, header .current a{
+    color: rgb(59, 56, 56);
+    font-weight: bold;
+   
+}
+
+
+header a:hover{
+    color:rgb(152, 173, 194);
+    font-weight:bold;
+}
+
+/*showcase*/
+#showcase{
+    min-height:400px;
+    background:url(' ../img//Soul_Nebula___Ic_1848.jpg');
+    background-repeat: no-repeat;
+    background-blend-mode: soft-light;
+    text-align:center;
+    color:rgb(240, 234, 234);
+}
+
+#showcase h1{
+   margin-top: 80px;
+   font-size: 55px;
+   margin-bottom: 10px;
+}
+
+#showcase p{
+    font-size: 20px;
+ }
+
+
+ #boxes .box{
+     margin-top:50px;
+     float:left;
+     text-align:center;
+     width:30%;
+     padding:10px;
+     margin-right: 0;
+     margin-left: 0;
+ }
+
+ #boxes .box  img{
+     width:250px;
+     border-radius: 5px;
+     opacity: .9;
+   
+ }
+
+ #boxes .box  img:hover{
+    
+    opacity: 1;
+}
+
+.summury p{
+    text-align: center;
+    font-size: 15px;
+    margin-top: 50px;
+
+}
+
+footer {
+    position: fixed;
+    bottom:0;
+    width:100%;
+    height:60px;   /* Height of the footer */
+    background:rgb(199, 199, 199);
+}
+
+footer p{
+    text-align: center;
+}
