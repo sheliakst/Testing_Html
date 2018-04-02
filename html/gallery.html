@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Astrophotography | Welcome</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,7 +28,86 @@
         </div>
     </header>
     <section class="summury"><p>Morbi eget congue est. Fusce sem justo, suscipit eget tincidunt ut, luctus nec metus. Cras at malesuada nisl. Donec vel tortor sem. Morbi mattis a neque eu lobortis. Cras augue diam, molestie at ultricies ut, iaculis id velit. Donec in nisi eu arcu gravida sodales. Pellentesque quis leo hendrerit, blandit lectus sed, aliquam nunc. </p></section>
-    
+    <section id="gallery">
+
+        <div id="myBtnContainer">
+                <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                <button class="btn" onclick="filterSelection('Nebulas')"> Nebulas</button>
+                <button class="btn" onclick="filterSelection('Galaxy')"> Galaxies</button>
+                <button class="btn" onclick="filterSelection('Ha')"> Ha</button>
+
+        </div>
+
+        <div class="container">
+            <div class="filterDiv Nebulas"><img src="../img/Crescent_Nebula___Ngc6888.jpg"></div>
+            <div class="filterDiv Nebulas"><img src="../img/Jellyfish_Nebula__ic_443_.png"></div>
+            <div class="filterDiv Nebulas"><img src="../img/Ldn1235___Vdb149__vdb150.jpg"></div>
+            <div class="filterDiv Galaxy"><img src="../img/M31_Andromeda_Galaxy.png"></div>
+            <div class="filterDiv Nebulas"><img src="../img/M45.png"></div>
+            <div class="filterDiv Ha"><img src="../img/Ngc_2244___Rosette_Nebula__ha_.jpg"></div>
+            <div class="filterDiv Nebulas"><img src="../img/Ngc_7000___North_America_Nebula___Mosaic.png"></div>
+            <div class="filterDiv Nebulas"><img src="../img/Sadr_Region.jpg"></div>
+            <div class="filterDiv Nebulas"><img src="../img/Soul_Nebula___Ic_1848.jpg"></div>
+            <div class="filterDiv Nebulas"><img src="../img/The_Lagoon_Nebula___M8.jpg"></div>
+        </div>
+
+        <script>
+           filterSelection("all")
+             function filterSelection(c) {
+             var x, i;
+             x = document.getElementsByClassName("filterDiv");
+             if (c == "all") c = "";
+             for (i = 0; i < x.length; i++) {
+             w3RemoveClass(x[i], "show");
+             if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                             }
+               }
+
+           function w3AddClass(element, name) {
+              var i, arr1, arr2;
+              arr1 = element.className.split(" ");
+              arr2 = name.split(" ");
+              for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+                    }
+               }
+
+            function w3RemoveClass(element, name) {
+               var i, arr1, arr2;
+               arr1 = element.className.split(" ");
+               arr2 = name.split(" ");
+             for (i = 0; i < arr2.length; i++) {
+              while (arr1.indexOf(arr2[i]) > -1) {
+                 arr1.splice(arr1.indexOf(arr2[i]), 1);     
+               }
+              }
+                 element.className = arr1.join(" ");
+                 }
+
+// Add active class to the current button (highlight it)
+            var btnContainer = document.getElementById("myBtnContainer");
+            var btns = btnContainer.getElementsByClassName("btn");
+             for (var i = 0; i < btns.length; i++) {
+              btns[i].addEventListener("click", function(){
+               var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+              this.className += " active";
+                });
+              z}
+
+     
+        </script>
+
+
+
+
+
+
+
+
+    </section>
+
+    <!--
     <section id="boxes">
         <div class="container">
           <div class="box">
@@ -47,7 +126,7 @@
                <p>am a dictum libero, vel tempus massa. Cras diam sem, commodo quis diam non, finibus bibendum sapien. </p>
             </div>  
         </div>
-    </section>
+    </section>-->
     <footer>
         <p>Stamatis Sarris, Copyright &copy</p>
     </footer>

@@ -26,11 +26,11 @@ ul{
 }
 
 header {
-    background: linear-gradient(rgb(107, 116, 165),rgb(155, 157, 184), rgb(243, 243, 243));
+    background: linear-gradient(rgb(255, 255, 255),rgb(255, 255, 255), rgb(233, 233, 233));
     opacity: .8;
-    padding-top: 40px;
+    padding-top: 0px;
     padding-bottom: 30px;
-    min-height: 70px;
+    min-height: 40px;
     border-bottom: black 1px double;
 }
 
@@ -70,7 +70,7 @@ header .highlight, header .current a{
 
 header a:hover{
     color:rgb(152, 173, 194);
-    font-weight:bold;
+    
 }
 
 /*showcase*/
@@ -135,4 +135,56 @@ footer p{
     text-align: center;
     overflow: scroll;
     margin-bottom: 15px;
+
+
 }
+
+
+
+
+/*test btn*/
+
+.filterDiv {
+    float: center;
+    color: #ffffff;
+    width: 20%x;
+    line-height: 100px;
+    text-align: center;
+    margin: 2px;
+    display: none;
+
+  }
+
+  .filterDiv img{
+      width:auto;
+      height:200px;
+      float:left;
+      margin:15px;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+  .container {
+    margin-top: 20px;
+    overflow: hidden;
+  }
+  
+  /* Style the buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #ddd;
+  }
+  
+  .btn.active {
+    background-color: #666;
+    color: white;
+  }
