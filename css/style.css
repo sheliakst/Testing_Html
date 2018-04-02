@@ -5,7 +5,7 @@ body {
     line-height:1.5;
     padding: 0;
     margin:0px;
-    background-color:rgb(199, 199, 199);
+    background-color:rgb(243, 243, 243);
 }
 
 /*global*/
@@ -26,7 +26,7 @@ ul{
 }
 
 header {
-    background: linear-gradient(rgb(236, 233, 233), rgb(243, 243, 243));
+    background: linear-gradient(rgb(107, 116, 165),rgb(155, 157, 184), rgb(243, 243, 243));
     opacity: .8;
     padding-top: 40px;
     padding-bottom: 30px;
@@ -124,13 +124,15 @@ header a:hover{
 }
 
 footer {
-    position: fixed;
-    bottom:0;
+    position: relative;
+    bottom:15px;
     width:100%;
-    height:60px;   /* Height of the footer */
-    background:rgb(199, 199, 199);
+    height:35px;   /* Height of the footer */
+    overflow: hidden;
 }
 
 footer p{
     text-align: center;
+    overflow: scroll;
+    margin-bottom: 15px;
 }
