@@ -28,7 +28,24 @@
         </div>
     </header>
     <section class="summury"><p>Morbi eget congue est. Fusce sem justo, suscipit eget tincidunt ut, luctus nec metus. Cras at malesuada nisl. Donec vel tortor sem. Morbi mattis a neque eu lobortis. Cras augue diam, molestie at ultricies ut, iaculis id velit. Donec in nisi eu arcu gravida sodales. Pellentesque quis leo hendrerit, blandit lectus sed, aliquam nunc. </p></section>
+   <hr>
+    <section id="converter">
+       <h3>Converter</h3>
+       <p>Type the inches you want to convert</p>
+       <p>
+          <label>Inches</label>
+          <input id="inInch" type="number" placeholder="Inches" oninput="Convertmm(this.value)" onchange="Convertmm(this.value)">
+          </p>
+           <p>In mm: <span id="outputMM"></span></p>
+
+        <script>
+            function Convertmm(valNum){
+                document.getElementById("outputMM").innerHTML=valNum*25.4;
+            }
+        </script>
     
+   </section>
+   <hr>
     <section id="boxes">
         <div class="container">
           <div class="box">

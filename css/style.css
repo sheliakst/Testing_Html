@@ -188,3 +188,12 @@ footer p{
     background-color: #666;
     color: white;
   }
+
+
+  #converter{
+      text-align: center;
+      border: 2px solid rgb(34, 34, 34);
+      margin: 50px;
+      width:450px;
+      align-self: center;
+  }
