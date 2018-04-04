@@ -129,6 +129,8 @@ footer {
     width:100%;
     height:35px;   /* Height of the footer */
     overflow: hidden;
+    position: fixed;
+
 }
 
 footer p{
@@ -189,11 +191,24 @@ footer p{
     color: white;
   }
 
-
   #converter{
-      text-align: center;
-      border: 2px solid rgb(34, 34, 34);
-      margin: 50px;
-      width:450px;
-      align-self: center;
-  }
+    text-align: center;
+    border: 2px solid rgb(34, 34, 34);
+    width:400px;
+    height:400px;
+    float:left;
+    margin-left:100px;
+    margin-top: 100px;
+}
+
+#converter2{  
+  text-align: center;
+  border: 2px solid rgb(34, 34, 34);
+  width:400px;
+  height:400px;
+  float:left;
+    margin-left: 100px;
+    margin-top: 100px;
+
+
+           }

@@ -29,23 +29,76 @@
     </header>
     <section class="summury"><p>Morbi eget congue est. Fusce sem justo, suscipit eget tincidunt ut, luctus nec metus. Cras at malesuada nisl. Donec vel tortor sem. Morbi mattis a neque eu lobortis. Cras augue diam, molestie at ultricies ut, iaculis id velit. Donec in nisi eu arcu gravida sodales. Pellentesque quis leo hendrerit, blandit lectus sed, aliquam nunc. </p></section>
    <hr>
-    <section id="converter">
-       <h3>Converter</h3>
-       <p>Type the inches you want to convert</p>
+   
+   <section id="converter">
+       <h3 style="text-decoration:underline; font-size:22px;">Length Converter</h3>
+       <p style="font-size:16px;">Type the inches you want to convert</p>
        <p>
-          <label>Inches</label>
-          <input id="inInch" type="number" placeholder="Inches" oninput="Convertmm(this.value)" onchange="Convertmm(this.value)">
-          </p>
-           <p>In mm: <span id="outputMM"></span></p>
-
+          <label><b>Inches</b>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <input id="inInch" inputmode="numeric"  onkeypress='return event.charCode >= 48 && event.charCode <= 57' size="10" placeholder="Inches"  oninput="Convertmm(this.value)" onchange="Convertmm(this.value)">
+          <br> <br>
+          <label><b>Millimetre:</b>&nbsp;  </label>
+          <input id="inmm" size="10"  onkeydown="return false" autocomplete="off"  placeholder="mm">
+          <br> <br>
+          <label><b>Centimetre:</b></label>
+          <input id="incm" size="10" onkeydown="return false"  autocomplete="off" placeholder="cm">
+          <br><br>
+          <label><b>Meter</b>:&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <input id="inm" size="10" onkeydown="return false"  autocomplete="off" placeholder="cm">
+            <br><br>
+            <input type="button" onclick="myFunction()" value="Reset">
+        </p>
         <script>
             function Convertmm(valNum){
-                document.getElementById("outputMM").innerHTML=valNum*25.4;
+                document.getElementById("inmm").value=valNum*25.4;
+                document.getElementById("incm").value=valNum*2.54;
+                document.getElementById("inm").value=valNum*0.254;
             }
-        </script>
-    
+            function myFunction() {
+                      document.getElementById("inInch").value="";
+                      document.getElementById("inmm").value="";
+                      document.getElementById("incm").value="";
+                      document.getElementById("inm").value="";
+              }
+        </script>    
    </section>
-   <hr>
+   <section id="converter2">
+       <h3>Telescope Converter</h3>
+       <p>Type telescope focal length and objective diameter</p>
+       <label>Focal Length</label>
+       <input id="FocalL" size="10" placeholder="Focal Length"   autocomplete="off" onkeypress='return event.charCode >= 48 && event.charCode <= 57'  ><br> 
+       <label>Telescope Diameter</label> 
+       <input id="Diam" size="10" placeholder="Objective in mm"   autocomplete="off"   onkeypress='return event.charCode >= 48 && event.charCode <= 57'><br>
+       <br><br>
+       <label>Focal Ratio</label>
+       <input id="fr" size="10" placeholder="Focal Ratio"  onkeydown="return false" autocomplete="off"  onkeypress='return event.charCode >= 48 && event.charCode <= 57' onkeydown="return false"  autocomplete="off">
+       <br><br>  
+        <input type="button" name="calculate" onclick="ConverT()" value="Calculate!"> 
+        <input type="button" name="reset" onclick="reset()" value="reset">
+
+
+
+       <script>
+     
+           function ConverT(){
+              var f=document.getElementById("FocalL").value;
+              var d= document.getElementById("Diam").value;
+              document.getElementById("fr").value=f/d;
+         
+            }
+
+            function reset(){
+                document.getElementById("fr").value="";
+                document.getElementById("Diam").value="";
+                document.getElementById("FocalL").value="";
+            }
+
+       </script>
+
+   </section>
+
+
+   <!--
     <section id="boxes">
         <div class="container">
           <div class="box">
@@ -64,7 +117,7 @@
                <p>am a dictum libero, vel tempus massa. Cras diam sem, commodo quis diam non, finibus bibendum sapien. </p>
             </div>  
         </div>
-    </section>
+    </section>-->
     <footer>
         <p>Stamatis Sarris, Copyright &copy</p>
     </footer>
